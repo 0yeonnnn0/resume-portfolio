@@ -1,12 +1,12 @@
 import { create } from "zustand";
 
-interface Header {
+export interface HeaderType {
   name: string;
   title: string;
   summary: string;
 }
 
-interface Experience {
+export interface ExperienceType {
   title: string;
   company: string;
   skills: string[];
@@ -15,25 +15,25 @@ interface Experience {
   details: string[];
 }
 
-interface Contact {
+export interface ContactType {
   phone: string;
   email: string;
   githubId: string;
 }
 
-interface Skill {
+export interface SkillType {
   category: string;
   items: string[];
 }
 
-interface Education {
+export interface EducationType {
   institution: string;
   degree: string;
   location: string;
   duration: string;
 }
 
-interface Organization {
+export interface OrganizationType {
   name: string;
   role: string;
   location: string;
@@ -42,12 +42,12 @@ interface Organization {
 }
 
 interface ResumeStore {
-  experiences: Experience[];
-  contact: Contact;
-  skills: Skill[];
-  education: Education;
-  organizations: Organization[];
-  header: Header;
+  experiences: ExperienceType[];
+  contact: ContactType;
+  skills: SkillType[];
+  education: EducationType;
+  organizations: OrganizationType[];
+  header: HeaderType;
 }
 
 export const useResumeStore = create<ResumeStore>(() => ({

@@ -1,13 +1,11 @@
 import { useResumeStore } from "../store/resumeStore";
+import Section from "./atoms/Section";
 
 export default function Skills() {
   const skills = useResumeStore((state) => state.skills);
 
   return (
-    <section id="skills">
-      <h2 className="text-2xl font-semibold mb-2 border-b-2 border-black pb-2">
-        Skills
-      </h2>
+    <Section id="skills" title="Skills">
       {skills.map((skill, index) => (
         <div key={index} className="mb-1">
           <h3 className="font-medium text-lg">{skill.category}</h3>
@@ -18,6 +16,6 @@ export default function Skills() {
           </ul>
         </div>
       ))}
-    </section>
+    </Section>
   );
 }

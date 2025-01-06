@@ -1,13 +1,11 @@
 import { useResumeStore } from "../store/resumeStore";
+import Section from "./atoms/Section";
 
 export default function Contact() {
   const contact = useResumeStore((state) => state.contact);
 
   return (
-    <section id="contact">
-      <h2 className="text-2xl font-semibold mb-2 border-b-2 border-black pb-2">
-        Contact
-      </h2>
+    <Section id="contact" title="Contact">
       <div className="flex flex-col gap-1">
         <p className="font-medium">
           <strong>Phone</strong> <br />
@@ -28,6 +26,6 @@ export default function Contact() {
           </a>
         </p>
       </div>
-    </section>
+    </Section>
   );
 }
