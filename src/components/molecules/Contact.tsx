@@ -1,7 +1,7 @@
 import { useResumeStore } from "../../store/resumeStore";
+import ContactItem from "../atoms/ContactItem";
 import ContactList from "../atoms/ContactList";
 import Section from "../atoms/Section";
-import ContactItem from "../molecules/ContactItem";
 
 export default function Contact() {
   const contact = useResumeStore((state) => state.contact);

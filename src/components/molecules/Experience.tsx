@@ -1,6 +1,6 @@
 import { ExperienceType } from "../../store/resumeStore";
+import ExperienceItem from "../atoms/ExperienceItem";
 import Section from "../atoms/Section";
-import ExperienceItem from "../molecules/ExperienceItem";
 
 export default function Experience({
   experiences,
