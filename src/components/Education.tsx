@@ -1,14 +1,11 @@
+import { useResumeStore } from "../store/resumeStore";
+
 export default function Education() {
-  const education = {
-    institution: "Kookmin University",
-    degree: "Bachelor of Science, Computer Science",
-    location: "Seoul, South Korea",
-    duration: "Mar 2020 - Expected 2026",
-  };
+  const education = useResumeStore((state) => state.education);
 
   return (
     <section id="education">
-      <h2 className="text-2xl font-semibold mb-2 border-b-2 border-black pb-2">
+      <h2 className="text-2xl font-semibold border-b-2 border-black pb-2">
         Education
       </h2>
       <div className="mb-6">

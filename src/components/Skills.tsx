@@ -1,34 +1,7 @@
+import { useResumeStore } from "../store/resumeStore";
+
 export default function Skills() {
-  const skills = [
-    {
-      category: "Languages",
-      items: ["JavaScript", "TypeScript"],
-    },
-    {
-      category: "Front-End",
-      items: [
-        "HTML",
-        "CSS",
-        "React",
-        "React Native",
-        "Expo",
-        "Next.js",
-        "TailwindCSS",
-        "Zustand",
-        "Redux",
-      ],
-    },
-    {
-      category: "Back-End",
-      items: [
-        "Node.js",
-        "Express",
-        "MongoDB",
-        "Firebase",
-        "AWS (EC2, S3, Lambda, API Gateway)",
-      ],
-    },
-  ];
+  const skills = useResumeStore((state) => state.skills);
 
   return (
     <section id="skills">
