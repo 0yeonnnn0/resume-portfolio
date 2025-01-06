@@ -1,6 +1,6 @@
 import Organization from "./Organization";
 import Skills from "./Skills";
-import Education from "./Education";
+import Education from "./organisms/Education";
 import Experience from "./organisms/Experience";
 import { useResumeStore } from "../store/resumeStore";
 import Contact from "./organisms/Contact";

@@ -1,4 +1,4 @@
-import { useResumeStore } from "../store/resumeStore";
+import { useResumeStore } from "../../store/resumeStore";
 
 export default function Header() {
   const header = useResumeStore((state) => state.header);
