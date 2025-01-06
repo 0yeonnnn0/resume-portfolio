@@ -6,16 +6,19 @@ export default function Contact() {
       </h2>
       <div className="flex flex-col gap-1">
         <p className="font-medium">
-          Phone: <br />
+          <strong>Phone</strong> <br />
           <span className="font-normal">657-460-0918</span>
         </p>
         <p className="font-medium">
-          Email: <br />
+          <strong>Email</strong> <br />
           <span className="font-normal">marco.dykim@gmail.com</span>
         </p>
         <p className="font-medium">
-          Github: <br />
-          <a href="https://github.com/0yeonnnn0" className="underline font-normal">
+          <strong>Github</strong> <br />
+          <a
+            href="https://github.com/0yeonnnn0"
+            className="underline font-normal"
+          >
             github.com/0yeonnnn0
           </a>
         </p>

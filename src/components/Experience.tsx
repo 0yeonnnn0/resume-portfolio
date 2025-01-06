@@ -6,7 +6,7 @@ export default function Experience({ experiences }: { experiences: any[] }) {
       </h2>
       {experiences.map((exp, index) => (
         <div key={index} className="mb-2">
-          <div className="grid grid-cols-[1fr,auto] mb-1">
+          <div className="grid grid-cols-[1fr,auto] mb-0.5">
             <div>
               <h3 className="text-lg font-semibold">{exp.title}</h3>
               <h4 className="font-medium">{exp.company}</h4>
@@ -17,7 +17,7 @@ export default function Experience({ experiences }: { experiences: any[] }) {
             </div>
           </div>
           <h4 className="text-sm text-gray-600">{exp.skills.join(", ")}</h4>
-          <ul className="list-disc list-inside mt-1 text-xs text-gray-700">
+          <ul className="list-disc list-inside mt-1 p-0 text-xs text-gray-700">
             {exp.details.map((detail: string, idx: number) => (
               <li key={idx}>{detail}</li>
             ))}
