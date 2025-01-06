@@ -1,9 +1,9 @@
-import Organization from "./Organization";
-import Skills from "./Skills";
-import Education from "./organisms/Education";
-import Experience from "./organisms/Experience";
-import { useResumeStore } from "../store/resumeStore";
-import Contact from "./organisms/Contact";
+import Organization from "../molecules/Organization";
+import Skills from "../molecules/Skills";
+import Education from "../molecules/Education";
+import Experience from "../molecules/Experience";
+import Contact from "../molecules/Contact";
+import { useResumeStore } from "../../store/resumeStore";
 
 export default function MainContent() {
   const experiences = useResumeStore((state) => state.experiences);
