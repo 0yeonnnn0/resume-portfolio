@@ -3,10 +3,13 @@ import MainContent from "../organisms/MainContent";
 
 export default function Resume() {
   return (
-    <div className="bg-gray-200 flex justify-center items-center min-h-screen">
-      <div className="bg-white shadow-md pt-4 pl-4 pr-6 mb-12 m-auto w-[794px] md:h-[1123px]">
-        <Header />
-        <MainContent />
+    <div className="bg-gray-200 flex justify-center items-center min-h-screen p-4">
+      <div className="bg-white shadow-md w-full max-w-[877px] relative">
+        <div className="pb-[141.4%]" />
+        <div className="absolute top-0 left-0 w-full h-full pt-4 pl-4 pr-5">
+          <Header />
+          <MainContent />
+        </div>
       </div>
     </div>
   );

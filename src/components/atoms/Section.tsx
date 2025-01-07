@@ -23,7 +23,7 @@ export default function Section({
           content={<p>Modal Content</p>}
         />
       </div>
-      <h2 className="mb-2 ml-2 border-b-2 border-black pb-2" />
+      <h2 className="mb-2 ml-1 border-b-2 border-black pb-2" />
       {children}
     </section>
   );

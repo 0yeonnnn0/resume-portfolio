@@ -9,7 +9,7 @@ export function HoverHighlight({
 }: HoverHighlightProps) {
   return (
     <span
-      className={`transition-all duration-300 hover:bg-gray-200/70 py-1 px-2 rounded cursor-pointer ${className}`}
+      className={`transition-all duration-300 hover:bg-gray-200/70 py-1 px-3 rounded cursor-pointer ${className}`}
     >
       {children}
     </span>

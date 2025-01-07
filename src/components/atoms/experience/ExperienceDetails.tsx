@@ -4,9 +4,14 @@ interface ExperienceDetailsProps {
 
 export default function ExperienceDetails({ details }: ExperienceDetailsProps) {
   return (
-    <ul className="list-disc list-inside mt-1 p-0 text-xs text-gray-700">
+    <ul className="list-disc list-inside mt-1 p-0 text-sm text-gray-700">
       {details.map((detail, idx) => (
-        <li key={idx}>{detail}</li>
+        <div key={idx}>
+          <span className="inline-block font-bold mr-1" key={idx}>
+            •
+          </span>{" "}
+          {detail}
+        </div>
       ))}
     </ul>
   );
