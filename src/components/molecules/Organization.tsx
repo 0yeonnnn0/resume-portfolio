@@ -1,6 +1,6 @@
 import { useResumeStore } from "../../store/resumeStore";
 import Section from "../atoms/Section";
-import OrganizationItem from "../atoms/OrganizationItem";
+import OrganizationItem from "../atoms/organization/OrganizationItem";
 
 export default function Organization() {
   const organizations = useResumeStore((state) => state.organizations);

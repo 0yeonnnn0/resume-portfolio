@@ -1,6 +1,6 @@
-import ContactLabel from "../atoms/ContactLabel";
-import ContactValue from "../atoms/ContactValue";
-import ContactLink from "../atoms/ContactLink";
+import ContactLabel from "../contact/ContactLabel";
+import ContactValue from "../contact/ContactValue";
+import ContactLink from "../contact/ContactLink";
 
 interface ContactItemProps {
   label: string;

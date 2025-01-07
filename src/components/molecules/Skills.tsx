@@ -1,6 +1,6 @@
 import { useResumeStore } from "../../store/resumeStore";
 import Section from "../atoms/Section";
-import SkillCategory from "../atoms/SkillCategory";
+import SkillCategory from "../atoms/skill/SkillCategory";
 
 export default function Skills() {
   const skills = useResumeStore((state) => state.skills);

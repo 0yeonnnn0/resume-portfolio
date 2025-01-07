@@ -1,7 +1,7 @@
-import ExperiencePeriod from "../atoms/ExperiencePeriod";
-import ExperienceTitle from "../atoms/ExperienceTitle";
-import ExperienceSkills from "../atoms/ExperienceSkills";
-import ExperienceDetails from "../atoms/ExperienceDetails";
+import ExperiencePeriod from "../experience/ExperiencePeriod";
+import ExperienceTitle from "../experience/ExperienceTitle";
+import ExperienceSkills from "../experience/ExperienceSkills";
+import ExperienceDetails from "../experience/ExperienceDetails";
 
 interface ExperienceItemProps {
   experience: {

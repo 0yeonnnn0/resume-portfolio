@@ -1,5 +1,5 @@
 import { ExperienceType } from "../../store/resumeStore";
-import ExperienceItem from "../atoms/ExperienceItem";
+import ExperienceItem from "../atoms/experience/ExperienceItem";
 import Section from "../atoms/Section";
 
 export default function Experience({

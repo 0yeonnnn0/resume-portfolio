@@ -1,6 +1,6 @@
 import { useResumeStore } from "../../store/resumeStore";
-import ContactItem from "../atoms/ContactItem";
-import ContactList from "../atoms/ContactList";
+import ContactItem from "../atoms/contact/ContactItem";
+import ContactList from "../atoms/contact/ContactList";
 import Section from "../atoms/Section";
 
 export default function Contact() {

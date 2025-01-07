@@ -1,10 +1,5 @@
+import { ContactType, HeaderType } from "@/types/profile.type";
 import { create } from "zustand";
-
-export interface HeaderType {
-  name: string;
-  title: string;
-  summary: string;
-}
 
 export interface ExperienceType {
   title: string;
@@ -13,12 +8,6 @@ export interface ExperienceType {
   location: string;
   duration: string;
   details: string[];
-}
-
-export interface ContactType {
-  phone: string;
-  email: string;
-  githubId: string;
 }
 
 export interface SkillType {
