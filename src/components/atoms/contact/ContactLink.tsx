@@ -1,3 +1,5 @@
+import { HoverHighlight } from "../HoverHighlight";
+
 interface ContactLinkProps {
   href: string;
   value: string;
@@ -7,11 +9,11 @@ export default function ContactLink({ href, value }: ContactLinkProps) {
   return (
     <a
       href={href}
-      className="underline font-normal"
+      className="underline"
       target="_blank"
       rel="noopener noreferrer"
     >
-      {value}
+      <HoverHighlight>{value}</HoverHighlight>
     </a>
   );
 }

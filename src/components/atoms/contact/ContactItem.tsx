@@ -1,6 +1,6 @@
 import ContactLabel from "../contact/ContactLabel";
-import ContactValue from "../contact/ContactValue";
 import ContactLink from "../contact/ContactLink";
+import { HoverHighlight } from "../HoverHighlight";
 
 interface ContactItemProps {
   label: string;
@@ -10,13 +10,12 @@ interface ContactItemProps {
 
 export default function ContactItem({ label, value, href }: ContactItemProps) {
   return (
-    <p className="font-medium">
+    <p>
       <ContactLabel label={label} />
-      <br />
       {href ? (
         <ContactLink href={href} value={value} />
       ) : (
-        <ContactValue value={value} />
+        <HoverHighlight className="font-normal">{value}</HoverHighlight>
       )}
     </p>
   );
