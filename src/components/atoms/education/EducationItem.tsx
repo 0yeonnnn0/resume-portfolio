@@ -1,4 +1,5 @@
 import { HoverHighlight } from "../HoverHighlight";
+import { Modal } from "../Modal";
 
 interface EducationItemProps {
   institution: string;
@@ -15,9 +16,15 @@ export default function EducationItem({
 }: EducationItemProps) {
   return (
     <div className="mb-6">
-      <HoverHighlight className="text-lg font-semibold">
-        {institution}
-      </HoverHighlight>
+      <Modal
+        title={institution}
+        trigger={
+          <HoverHighlight className="text-lg font-semibold">
+            {institution}
+          </HoverHighlight>
+        }
+        content={<div>test</div>}
+      />
       <div className="ml-2">
         <p className="text-sm text-gray-600">{degree}</p>
         <p className="text-sm text-gray-600">
