@@ -16,7 +16,7 @@ export default function Header() {
             content={<ProfileDialogContent header={header} />}
           />
         </h1>
-        <p className="mt-4 text-sm">
+        <p className="mt-4 ml-2 text-sm">
           <strong>{header.title}</strong> {header.summary}
         </p>
       </div>
