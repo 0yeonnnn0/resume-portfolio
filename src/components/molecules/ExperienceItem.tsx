@@ -1,9 +1,9 @@
-import ExperiencePeriod from "../atoms/experience/ExperiencePeriod";
-import ExperienceSkills from "../atoms/experience/ExperienceSkills";
-import ExperienceDetails from "../atoms/experience/ExperienceDetails";
-import { Modal } from "../atoms/Modal";
-import MediumFontTitle from "../atoms/experience/MediumFontTitle";
-import { HoverHighlight } from "../atoms/HoverHighlight";
+import ExperienceSkills from "@/components/atoms/experience/ExperienceSkills";
+import { Modal } from "@/components/atoms/modals/Modal";
+import MediumFontTitle from "@/components/atoms/experience/MediumFontTitle";
+import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
+import DotDetails from "@/components/atoms/experience/ExperienceDetails";
+import RightTextStack from "@/components/atoms/shared/RightTextStack";
 
 interface ExperienceItemProps {
   experience: {
@@ -24,21 +24,20 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       <div className="grid grid-cols-[1fr,auto] mb-0.5">
         <div>
           <Modal
-            title={title}
             trigger={
               <HoverHighlight className="text-lg font-semibold">
                 {title}
               </HoverHighlight>
             }
-            content={<p>Modal Content</p>}
+            content={<div>test</div>}
           />
           <MediumFontTitle title={company} />
         </div>
-        <ExperiencePeriod location={location} duration={duration} />
+        <RightTextStack location={location} duration={duration} />
       </div>
-      <div className="ml-2">
+      <div className="ml-3">
         <ExperienceSkills skills={skills} />
-        <ExperienceDetails details={details} />
+        <DotDetails details={details} />
       </div>
     </div>
   );

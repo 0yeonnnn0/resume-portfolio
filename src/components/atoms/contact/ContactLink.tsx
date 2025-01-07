@@ -1,4 +1,4 @@
-import { HoverHighlight } from "../HoverHighlight";
+import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
 
 interface ContactLinkProps {
   href: string;

@@ -1,5 +1,5 @@
-import { HoverHighlight } from "../HoverHighlight";
-import { Modal } from "../Modal";
+import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
+import { Modal } from "@/components/atoms/modals/Modal";
 
 interface SkillCategoryProps {
   category: string;
@@ -20,7 +20,6 @@ export default function SkillCategory({ category, items }: SkillCategoryProps) {
               </HoverHighlight>
             }
             content={<div>test</div>}
-            title={item}
           />
         ))}
       </ul>

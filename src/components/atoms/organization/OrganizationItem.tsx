@@ -1,5 +1,7 @@
-import { HoverHighlight } from "../HoverHighlight";
-import { Modal } from "../Modal";
+import DotDetails from "@/components/atoms/experience/ExperienceDetails";
+import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
+import { Modal } from "@/components/atoms/modals/Modal";
+import RightTextStack from "@/components/atoms/shared/RightTextStack";
 
 interface OrganizationItemProps {
   name: string;
@@ -27,25 +29,14 @@ export default function OrganizationItem({
               </HoverHighlight>
             }
             content={<div>test</div>}
-            title={name}
           />
           <p className="text-sm text-gray-600 ml-2">{role}</p>
         </div>
-        <div className="flex flex-col gap-1">
-          <p className="text-sm text-gray-600 text-right">{location}</p>
-          <p className="text-sm text-gray-600 text-right">{duration}</p>
-        </div>
+        <RightTextStack location={location} duration={duration} />
       </div>
-      <ul className="list-disc list-inside mt-1 text-sm text-gray-700 ml-2">
-        {details.map((detail, idx) => (
-          <div key={idx}>
-            <span className="inline-block font-bold text-sm mr-1" key={idx}>
-              •
-            </span>{" "}
-            {detail}
-          </div>
-        ))}
-      </ul>
+      <div className="ml-2">
+        <DotDetails details={details} />
+      </div>
     </div>
   );
 }

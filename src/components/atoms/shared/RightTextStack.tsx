@@ -1,12 +1,12 @@
-interface ExperiencePeriodProps {
+interface RightTextStackProps {
   location: string;
   duration: string;
 }
 
-export default function ExperiencePeriod({
+export default function RightTextStack({
   location,
   duration,
-}: ExperiencePeriodProps) {
+}: RightTextStackProps) {
   return (
     <div className="flex flex-col mt-1">
       <p className="text-sm text-gray-600 text-right">{location}</p>

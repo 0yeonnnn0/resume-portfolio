@@ -1,6 +1,6 @@
 import ContactLabel from "../contact/ContactLabel";
 import ContactLink from "../contact/ContactLink";
-import { HoverHighlight } from "../HoverHighlight";
+import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
 
 interface ContactItemProps {
   label: string;
