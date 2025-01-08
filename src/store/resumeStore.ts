@@ -14,8 +14,13 @@ export interface ExperienceType {
   skills: string[];
   description: string[];
   url?: string;
+  organizationInfo?: string; // 조직 설명 추가
+  images?: {
+    url: string;
+    alt?: string;
+    description?: string;
+  }[]; // 프로젝트 이미지 추가
 }
-
 export interface SkillType {
   category: string;
   items: string[];
@@ -76,8 +81,9 @@ export const useResumeStore = create<ResumeStore>(() => ({
         end: "Dec 2024",
       },
       skills: [
-        "React Native + Expo",
-        "Typescript",
+        "React Native",
+        "Expo",
+        "TypeScript",
         "Zustand",
         "Figma",
         "Docker",
@@ -89,6 +95,28 @@ export const useResumeStore = create<ResumeStore>(() => ({
         "Collaborated with backend developers to ensure seamless integration.",
       ],
       url: "https://github.com/yourusername/pawsome-day",
+      organizationInfo:
+        "Global Problem-Based Learning은 실� 산업 현장의 문제를 해결하는 프로젝트 기반 교육을 제공하는 프로그램입니다. 학생들은 실제 기업과 협력하여 현실적인 문제를 해결하고, 실무 경험을 쌓을 수 있습니다.",
+      images: [
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "Pawsome Day 메인 화면",
+          description:
+            "반려동물 �봄 서비스의 메인 대시보드 화면입니다. 실시간 반려동물 상태와 일정을 한눈에 확인할 수 있습니다.",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "일정 관리 화면",
+          description:
+            "돌봄 서비스 예약 및 일정 관리 화면입니다. 직관적인 캘린더 UI로 손쉽게 일정을 관리할 수 있습니다.",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "실시간 채팅 화면",
+          description:
+            "보호자와 �봄 센터 간의 실시간 채팅 기능입니다. 반려동물의 상태를 즉시 공유할 수 있습니다.",
+        },
+      ],
     },
     {
       title: "Duel",
@@ -100,7 +128,13 @@ export const useResumeStore = create<ResumeStore>(() => ({
         start: "Oct 2024",
         end: "Dec 2024",
       },
-      skills: ["React", "Node.js", "AWS Lambda", "AWS API Gateway"],
+      skills: [
+        "React",
+        "Node.js",
+        "AWS Lambda",
+        "AWS API Gateway",
+        "OpenAI API",
+      ],
       description: [
         "Developed a platform to streamline the creation of Quizlet decks by extracting key points from submitted videos.",
         "Enabled users to create and organize questions in just 8 minutes by submitting a video.",
@@ -108,6 +142,22 @@ export const useResumeStore = create<ResumeStore>(() => ({
         "Refactored the frontend codebase to enhance performance and maintainability.",
       ],
       url: "https://github.com/yourusername/duel",
+      organizationInfo:
+        "이 프로젝트는 교육 기술 혁신을 목표로 하는 Global Problem-Based Learning의 일환으로 진행되었습니다. 영상 콘텐츠를 효과적인 학습 자료로 변환하는 솔루션을 개발했습니다.",
+      images: [
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "Duel 대시보드",
+          description:
+            "사용자의 학습 진행 상황과 생성된 퀴즈 세트를 한눈에 볼 수 있는 대시보드입니다.",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "비디오 업로드 화면",
+          description:
+            "드래그 앤 드롭으로 간편하게 영상을 업로드하고 처리할 수 있는 인터페이스입니다.",
+        },
+      ],
     },
     {
       title: "Devmon",
@@ -119,13 +169,29 @@ export const useResumeStore = create<ResumeStore>(() => ({
         start: "Nov 2024",
         end: "Dec 2024",
       },
-      skills: ["React", "Typescript", "Node.js", "Express.js", "OpenAI API"],
+      skills: ["React", "TypeScript", "Node.js", "Express.js", "OpenAI API"],
       description: [
         "Built a platform to address the lack of explanations for coding test problems on 'Baekjoon'.",
         "Delivered features such as recommended algorithms, detailed explanations, and solution approaches.",
         "Independently developed the entire project and implemented prompt engineering.",
       ],
       url: "https://github.com/yourusername/devmon",
+      organizationInfo:
+        "알고리즘 학습 플랫폼의 접근성을 높이기 위한 프로젝트로, 기존 Baekjoon 온라인 저지의 문제 해설 부족 문제를 해결하고자 시작되었습니다.",
+      images: [
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "문제 목록 화면",
+          description:
+            "사용자 수준에 맞는 알고리즘 문제를 추천하는 메인 화면입니다.",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "문제 해설 화면",
+          description:
+            "AI가 생성한 상한 문제 해설과 접근 방법을 제공하는 화면입니다.",
+        },
+      ],
     },
   ],
   contact: {
@@ -242,7 +308,8 @@ export const useResumeStore = create<ResumeStore>(() => ({
           type: "project",
           title: "과학 동아리 회장",
           date: "2019",
-          description: "과학 실험 및 연구 활동 주도, 교내 과학 축제 기획 및 운영",
+          description:
+            "과학 실험 및 연구 활동 주도, 교내 과학 축제 기획 및 운영",
         },
       ],
     },

@@ -5,6 +5,7 @@ import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
 import DotDetails from "@/components/atoms/experience/ExperienceDetails";
 import RightTextStack from "@/components/atoms/shared/RightTextStack";
 import { ExperienceType } from "@/store/resumeStore";
+import ExperienceItemModalContent from "./modals/ExperienceItemModalContent";
 
 interface ExperienceItemProps {
   experience: ExperienceType;
@@ -24,7 +25,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
                 {title}
               </HoverHighlight>
             }
-            content={<div>test</div>}
+            content={<ExperienceItemModalContent experience={experience} />}
           />
           <MediumFontTitle title={company} />
         </div>

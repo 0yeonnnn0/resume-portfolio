@@ -6,7 +6,9 @@ interface EducationModalProps {
   education: EducationType[];
 }
 
-export default function EducationModalContent({ education }: EducationModalProps) {
+export default function EducationModalContent({
+  education,
+}: EducationModalProps) {
   return (
     <div className="p-6 space-y-8">
       {/* 헤더 섹션 */}
@@ -24,20 +26,18 @@ export default function EducationModalContent({ education }: EducationModalProps
               <GraduationCap className="w-5 h-5 text-gray-600" />
             </div>
 
-            {/* 학교 정보 카드 */}
-            <div className="bg-card rounded-lg border p-6 space-y-6">
+            {/* 학교 정보 카드 - border 제거 */}
+            <div className="p-6 space-y-6">
               {/* 학교명 및 상태 */}
               <div className="space-y-2">
                 <h3 className="text-2xl font-bold">{edu.institution}</h3>
                 <div className="flex items-center gap-2 text-gray-600">
-                  <Badge variant={edu.status === "졸업" ? "default" : "secondary"}>
+                  <Badge
+                    variant={edu.status === "졸업" ? "default" : "secondary"}
+                  >
                     {edu.status}
                   </Badge>
-                  {edu.gpa && (
-                    <Badge variant="outline">
-                      GPA: {edu.gpa}
-                    </Badge>
-                  )}
+                  {edu.gpa && <Badge variant="outline">GPA: {edu.gpa}</Badge>}
                 </div>
               </div>
 
@@ -45,7 +45,9 @@ export default function EducationModalContent({ education }: EducationModalProps
               <div className="grid gap-2 text-gray-600">
                 <div className="flex items-center gap-2">
                   <GraduationCap className="w-4 h-4" />
-                  <span>{edu.degree} in {edu.major}</span>
+                  <span>
+                    {edu.degree} in {edu.major}
+                  </span>
                 </div>
                 <div className="flex items-center gap-2">
                   <MapPin className="w-4 h-4" />
@@ -53,7 +55,11 @@ export default function EducationModalContent({ education }: EducationModalProps
                 </div>
                 <div className="flex items-center gap-2">
                   <CalendarDays className="w-4 h-4" />
-                  <span>{edu.period ? `${edu.period.start} - ${edu.period.end}` : edu.duration}</span>
+                  <span>
+                    {edu.period
+                      ? `${edu.period.start} - ${edu.period.end}`
+                      : edu.duration}
+                  </span>
                 </div>
               </div>
 
@@ -71,7 +77,9 @@ export default function EducationModalContent({ education }: EducationModalProps
                           )}
                         </div>
                         {course.description && (
-                          <p className="mt-1 text-sm text-gray-600">{course.description}</p>
+                          <p className="mt-1 text-sm text-gray-600">
+                            {course.description}
+                          </p>
                         )}
                       </div>
                     ))}
@@ -87,11 +95,17 @@ export default function EducationModalContent({ education }: EducationModalProps
                     {edu.achievements.map((achievement, idx) => (
                       <div key={idx} className="p-4 bg-gray-50 rounded-lg">
                         <div className="flex justify-between items-start">
-                          <span className="font-medium">{achievement.title}</span>
-                          <span className="text-sm text-gray-600">{achievement.date}</span>
+                          <span className="font-medium">
+                            {achievement.title}
+                          </span>
+                          <span className="text-sm text-gray-600">
+                            {achievement.date}
+                          </span>
                         </div>
                         {achievement.description && (
-                          <p className="mt-1 text-sm text-gray-600">{achievement.description}</p>
+                          <p className="mt-1 text-sm text-gray-600">
+                            {achievement.description}
+                          </p>
                         )}
                       </div>
                     ))}
