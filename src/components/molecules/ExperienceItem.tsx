@@ -4,20 +4,15 @@ import MediumFontTitle from "@/components/atoms/experience/MediumFontTitle";
 import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
 import DotDetails from "@/components/atoms/experience/ExperienceDetails";
 import RightTextStack from "@/components/atoms/shared/RightTextStack";
+import { ExperienceType } from "@/store/resumeStore";
 
 interface ExperienceItemProps {
-  experience: {
-    title: string;
-    company: string;
-    location: string;
-    duration: string;
-    skills: string[];
-    details: string[];
-  };
+  experience: ExperienceType;
 }
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
-  const { title, company, location, duration, skills, details } = experience;
+  const { title, company, location, duration, skills, description } =
+    experience;
 
   return (
     <div className="mb-2">
@@ -37,7 +32,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
       </div>
       <div className="ml-3">
         <ExperienceSkills skills={skills} />
-        <DotDetails details={details} />
+        <DotDetails details={description} />
       </div>
     </div>
   );
