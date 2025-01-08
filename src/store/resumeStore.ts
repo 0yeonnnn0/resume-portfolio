@@ -24,8 +24,26 @@ export interface SkillType {
 export interface EducationType {
   institution: string;
   degree: string;
+  major: string;
   location: string;
   duration: string;
+  period?: {
+    start: string;
+    end: string;
+  };
+  status: "재학중" | "휴학중" | "졸업예정" | "졸업";
+  gpa?: string;
+  courses?: {
+    name: string;
+    description: string;
+    grade?: string;
+  }[];
+  achievements?: {
+    type: "award" | "scholarship" | "certification" | "project";
+    title: string;
+    date: string;
+    description?: string;
+  }[];
 }
 
 export interface OrganizationType {
@@ -40,7 +58,7 @@ interface ResumeStore {
   experiences: ExperienceType[];
   contact: ContactType;
   skills: SkillType[];
-  education: EducationType;
+  education: EducationType[];
   organizations: OrganizationType[];
   header: HeaderType;
 }
@@ -145,12 +163,90 @@ export const useResumeStore = create<ResumeStore>(() => ({
       ],
     },
   ],
-  education: {
-    institution: "Kookmin University",
-    degree: "Bachelor of Science, Computer Science",
-    location: "Seoul, South Korea",
-    duration: "Mar 2020 - Expected 2026",
-  },
+  education: [
+    {
+      institution: "Kookmin University",
+      degree: "Bachelor of Science",
+      major: "Computer Science",
+      location: "Seoul, South Korea",
+      duration: "Mar 2020 - Expected 2026",
+      period: {
+        start: "Mar 2020",
+        end: "Expected 2026",
+      },
+      status: "재학중",
+      gpa: "4.0/4.5",
+      courses: [
+        {
+          name: "자료구조",
+          description: "다양한 자료구조의 개념과 구현 방법 학습",
+          grade: "A+",
+        },
+        {
+          name: "알고리즘",
+          description: "기본적인 알고리즘 설계 및 분석 방법론 학습",
+          grade: "A+",
+        },
+        {
+          name: "운영체제",
+          description: "운영체제의 기본 개념과 구현 원리 학습",
+          grade: "A",
+        },
+        {
+          name: "데이터베이스",
+          description: "관계형 데이터베이스 설계 및 SQL 학습",
+          grade: "A",
+        },
+      ],
+      achievements: [
+        {
+          type: "scholarship",
+          title: "성적 우수 장학금",
+          date: "2023-2",
+          description: "학기 평점 4.3 이상 달성",
+        },
+        {
+          type: "project",
+          title: "학과 홈페이지 리뉴얼",
+          date: "2023-1",
+          description:
+            "React와 TypeScript를 활용한 학과 홈페이지 개편 프로젝트 진행",
+        },
+        {
+          type: "certification",
+          title: "정보처리기사",
+          date: "2023-08",
+          description: "국가공인 자격증 취득",
+        },
+      ],
+    },
+    {
+      institution: "Boin High School",
+      degree: "High School Diploma",
+      major: "Natural Sciences",
+      location: "Seoul, South Korea",
+      duration: "Mar 2017 - Feb 2020",
+      period: {
+        start: "Mar 2017",
+        end: "Feb 2020",
+      },
+      status: "졸업",
+      achievements: [
+        {
+          type: "award",
+          title: "과학경시대회 금상",
+          date: "2019-05",
+          description: "교내 과학경시대회 물리 부문 1위",
+        },
+        {
+          type: "project",
+          title: "과학 동아리 회장",
+          date: "2019",
+          description: "과학 실험 및 연구 활동 주도, 교내 과학 축제 기획 및 운영",
+        },
+      ],
+    },
+  ],
   organizations: [
     {
       name: "KOSS",
