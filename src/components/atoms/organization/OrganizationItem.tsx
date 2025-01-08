@@ -2,22 +2,18 @@ import DotDetails from "@/components/atoms/experience/ExperienceDetails";
 import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
 import { Modal } from "@/components/atoms/modals/Modal";
 import RightTextStack from "@/components/atoms/shared/RightTextStack";
+import OrganizationItemModalContent from "@/components/molecules/modals/OrganizationItemModalContent";
+import { OrganizationType } from "@/store/resumeStore";
 
 interface OrganizationItemProps {
-  name: string;
-  role: string;
-  location: string;
-  duration: string;
-  details: string[];
+  organization: OrganizationType;
 }
 
 export default function OrganizationItem({
-  name,
-  role,
-  location,
-  duration,
-  details,
+  organization,
 }: OrganizationItemProps) {
+  const { name, role, location, duration, details } = organization;
+
   return (
     <div className="mb-4">
       <div className="grid grid-cols-[1fr,auto] gap-4">
@@ -28,7 +24,9 @@ export default function OrganizationItem({
                 {name}
               </HoverHighlight>
             }
-            content={<div>test</div>}
+            content={
+              <OrganizationItemModalContent organization={organization} />
+            }
           />
           <p className="text-sm text-gray-600 ml-2">{role}</p>
         </div>

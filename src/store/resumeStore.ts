@@ -57,6 +57,11 @@ export interface OrganizationType {
   location: string;
   duration: string;
   details: string[];
+  images?: {
+    url: string;
+    alt?: string;
+    description?: string;
+  }[];
 }
 
 interface ResumeStore {
@@ -325,6 +330,23 @@ export const useResumeStore = create<ResumeStore>(() => ({
         "Guided the team to complete a project utilizing these technologies.",
         "Managed the 'Mogakko' study group, fostering collaboration among new members through coding sessions, exam preparation, and shared activities.",
         "Promoted active engagement in school-related events.",
+      ],
+      images: [
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "웹 개발 스터디 진행",
+          description: "React와 TypeScript 스터디 세션을 진행하는 모습",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "모각코 활동",
+          description: "팀원들과 함께하는 모각코 활동 현장",
+        },
+        {
+          url: "https://picsum.photos/200/300",
+          alt: "프로젝트 발표",
+          description: "팀 프로젝트 최종 발표 세션",
+        },
       ],
     },
   ],

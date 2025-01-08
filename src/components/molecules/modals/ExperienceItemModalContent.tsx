@@ -68,7 +68,6 @@ export default function ExperienceItemModalContent({
       {/* 프로젝트 이미지 캐러셀 */}
       {experience.images && experience.images.length > 0 && (
         <div className="space-y-4">
-          <h3 className="text-lg font-semibold">Project Gallery</h3>
           <Carousel className="w-full max-w-3xl mx-auto">
             <CarouselContent>
               {experience.images.map((image, index) => (

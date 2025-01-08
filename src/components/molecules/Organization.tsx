@@ -12,15 +12,8 @@ export default function Organization() {
       title="Organization"
       content={<OrganizationModalContent organizations={organizations} />}
     >
-      {organizations.map((org, index) => (
-        <OrganizationItem
-          key={index}
-          name={org.name}
-          role={org.role}
-          location={org.location}
-          duration={org.duration}
-          details={org.details}
-        />
+      {organizations.map((organization, index) => (
+        <OrganizationItem key={index} organization={organization} />
       ))}
     </Section>
   );
