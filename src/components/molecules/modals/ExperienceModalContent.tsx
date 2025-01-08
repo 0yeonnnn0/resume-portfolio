@@ -91,7 +91,9 @@ export default function ExperienceModalContent({
                       {project.role}
                     </TableCell>
                     <TableCell>{project.company}</TableCell>
-                    <TableCell>{project.duration}</TableCell>
+                    <TableCell>
+                      {project.period.start} - {project.period.end}
+                    </TableCell>
                     <TableCell>
                       <div className="flex flex-wrap gap-1">
                         {project.skills.map((skill, idx) => (

@@ -12,7 +12,7 @@ interface OrganizationItemProps {
 export default function OrganizationItem({
   organization,
 }: OrganizationItemProps) {
-  const { name, role, location, duration, details } = organization;
+  const { name, role, location, period, details } = organization;
 
   return (
     <div className="mb-4">
@@ -30,7 +30,7 @@ export default function OrganizationItem({
           />
           <p className="text-sm text-gray-600 ml-2">{role}</p>
         </div>
-        <RightTextStack location={location} duration={duration} />
+        <RightTextStack location={location} period={period} />
       </div>
       <div className="ml-2">
         <DotDetails details={details} />

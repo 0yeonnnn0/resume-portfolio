@@ -12,8 +12,7 @@ interface ExperienceItemProps {
 }
 
 export default function ExperienceItem({ experience }: ExperienceItemProps) {
-  const { title, company, location, duration, skills, description } =
-    experience;
+  const { title, company, location, period, skills, description } = experience;
 
   return (
     <div className="mb-2">
@@ -29,7 +28,7 @@ export default function ExperienceItem({ experience }: ExperienceItemProps) {
           />
           <MediumFontTitle title={company} />
         </div>
-        <RightTextStack location={location} duration={duration} />
+        <RightTextStack location={location} period={period} />
       </div>
       <div className="ml-3">
         <ExperienceSkills skills={skills} />
