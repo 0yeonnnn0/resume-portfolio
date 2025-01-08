@@ -1,6 +1,3 @@
-import { HoverHighlight } from "@/components/atoms/shared/HoverHighlight";
-import { Modal } from "@/components/atoms/modals/Modal";
-
 interface EducationItemProps {
   institution: string;
   degree: string;
@@ -15,16 +12,9 @@ export default function EducationItem({
   duration,
 }: EducationItemProps) {
   return (
-    <div className="mb-6">
-      <Modal
-        trigger={
-          <HoverHighlight className="text-lg font-semibold">
-            {institution}
-          </HoverHighlight>
-        }
-        content={<div>test</div>}
-      />
-      <div className="ml-2">
+    <div className="mb-6 ml-2">
+      <div className="text-lg font-semibold mb-1">{institution}</div>
+      <div className="">
         <p className="text-sm text-gray-600">{degree}</p>
         <p className="text-sm text-gray-600">
           {location} | {duration}
