@@ -13,10 +13,7 @@ export default function Education() {
       content={<EducationModalContent education={education} />}
     >
       <EducationItem
-        institution={education[0].institution}
-        degree={education[0].degree}
-        location={education[0].location}
-        duration={education[0].duration}
+        education={education[0]}
       />
     </Section>
   );

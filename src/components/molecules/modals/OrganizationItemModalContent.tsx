@@ -27,7 +27,9 @@ export default function OrganizationItemModalContent({
           </div>
           <div className="flex items-center gap-2">
             <Calendar className="w-4 h-4" />
-            <span>{organization.duration}</span>
+            <span>
+              {organization.period.start} - {organization.period.end}
+            </span>
           </div>
           <div className="flex items-center gap-2">
             <MapPin className="w-4 h-4" />

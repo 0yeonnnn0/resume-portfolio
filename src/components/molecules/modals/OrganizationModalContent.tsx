@@ -75,7 +75,9 @@ export default function OrganizationModalContent({
                     </TableCell>
                     <TableCell className="whitespace-nowrap">{org.role}</TableCell>
                     <TableCell>{org.location}</TableCell>
-                    <TableCell>{org.duration}</TableCell>
+                    <TableCell>
+                      {org.period.start} - {org.period.end}
+                    </TableCell>
                     <TableCell className="pr-6 whitespace-nowrap">
                       <ul className="space-y-1 list-disc list-inside text-sm text-gray-700">
                         {org.details.map((detail, idx) => (
